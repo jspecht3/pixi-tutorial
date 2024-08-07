@@ -7,7 +7,14 @@ A quick tutorial for the "project manager" `pixi`. Although this tutorial is in 
 ## Sections
 - [Overview](#overview)
 - [Installation](#installation)
+  - [Linux](#linux)
+  - [macOS](#macos)
+  - [Windows](#windows)
+  - [Others](https://github.com/prefix-dev/pixi/main?tab=readme-ov-file#installation)
 - [Usage](#usage)
+  - [Getting Started](#getting-started)
+  - [Making Your Own Project](#making-your-own-project)
+  - [Using Somebody Else's Project](#using-somebody-elses-project)
 
 ## Overview
 What is `pixi`?
@@ -96,7 +103,7 @@ Before getting into any development, a preperations should be made.
 
 First, if you are currently in a conda environment, you will see something that looks like this:
 ```
-(base) joe@v5:~/project/path/pixi-example$
+(base) joe@v5:~$
 ```
 If you are not in a `conda` environment, good, the next step will not apply to you.
 
