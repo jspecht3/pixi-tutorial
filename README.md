@@ -11,9 +11,9 @@ A quick tutorial for the "project manager" `pixi`. Although this tutorial is in 
   - [Windows](#windows)
   - [Others](https://github.com/prefix-dev/pixi/main?tab=readme-ov-file#installation)
 - [Usage](#usage)
-  - [Getting Started](#getting-started)
-  - [Making Your Own Project](#making-your-own-project)
-  - [Using Somebody Else's Project](#using-somebody-elses-project)
+- [Getting Started](#getting-started)
+- [Making Your Own Project](#making-your-own-project)
+- [Using Somebody Else's Project](#using-somebody-elses-project)
 
 ## Overview
 What is `pixi`?
@@ -91,13 +91,8 @@ winget
 winget install prefix-dev.pixi
 ```
 
-## Usage
-- [Getting Started](#getting-started)
-- [Making Your Own Project](#making-your-own-project)
-- [Using Somebody Else's Project](#using-somebody-elses-project)
 
-
-### Getting Started
+## Getting Started
 Before getting into any development, a preperations should be made.
 
 First, if you are currently in a conda environment, you will see something that looks like this:
@@ -134,7 +129,8 @@ ModuleNotFoundError: No module named 'numpy'
 >>> exit()
 ```
 
-### Making Your Own Project
+
+## Making Your Own Project
 To start, make a directory where you want your project to live and go into that directory
 ```
 mkdir ~/project/path/pixi-example
@@ -185,7 +181,7 @@ ModuleNotFoundError: No module named 'numpy'
 To run our file, we can use two main methods: in a `pixi` sub-shell or using `pixi run python-file.py`. The choice of which method to use is primarily personal preference.
 
 
-#### Sub-shell Method
+### Sub-shell Method
 Enterning the sub-shell creates a temporary python environment with all the installed packages being available.
 ```
 joe@v5:~/...$ pixi shell
@@ -210,14 +206,13 @@ You can also exit the sub-sell the same way you exit a regular shell.
 joe@v5:~/...$
 ```
 
-#### `pixi run`
+### `pixi run` Method
 Using `pixi` run does not require you to enter a sub-shell and can be done with
 ```
-joe@v5:~/...$ pixi run "example.py"
+joe@v5:~/...$ pixi run python "example.py"
 3.141592653589793
 ```
 
 
-
-### Using Somebody Else's Project
+## Using Somebody Else's Project
 test
