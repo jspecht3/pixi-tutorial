@@ -103,7 +103,9 @@ This creates a `pixi.toml`, which gives an overview of the project. Inside this 
 ```
 vi pixi.toml
 ```
-In the `channels` line, you will see your operating system. The `authors` will automatically populate with your linked `git` e-mail. If you want to make your project compatible with other platforms, add them here.
+This file is meant to be human readable, so anything information about the project you want is probably here.
+
+The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here.
 ```
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 ```
