@@ -86,8 +86,8 @@ winget install prefix-dev.pixi
 ```
 
 ## Usage
-- [Making Your Own Project]()
-- [Using Somebody Else's Project]()
+- [Making Your Own Project](#making-your-own-project)
+- [Using Somebody Else's Project](#using-somebody-elses-project)
 
 ### Making Your Own Project
 test
