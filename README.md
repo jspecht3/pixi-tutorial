@@ -19,7 +19,7 @@ Where can you use `pixi`?
 
 When to use `pixi`?
 - any project where you would use a `python` environment or virtual environment for development or testing
-- if you want your coding environment to be reproducible for people other than yourself
+- if you want your coding environment to be easily reproducible
 
 How to use `pixi`
 - Follow the installation instructions below 🙂
