@@ -93,7 +93,7 @@ winget install prefix-dev.pixi
 
 
 ## Getting Started
-Before getting into any development, a preperations should be made.
+Before getting into any development, preperations should be made.
 
 First, if you are currently in a conda environment, you will see something that looks like this:
 ```
@@ -140,7 +140,8 @@ In this directory, we need to initialize a `pixi` project
 ```
 pixi init
 ```
-This creates a `pixi.toml`, which gives an overview of the project. Inside this file is where you can add github actions and add more platforms.
+### Introduction to `pixi.toml`
+Initializing a `pixi` project creates a `pixi.toml`, which gives an overview of the project. Inside this file is where you can add github actions and add more platforms.
 ```
 vi pixi.toml
 ```
@@ -149,7 +150,8 @@ This file is meant to be human readable, so any information you want about the p
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 ```
 
-Right now, we have no non-standard `python` modules, but adding them is very easy. Let's add numpy to our project:
+### Adding the First Python Package
+Right now, we have no non-standard `python` packages, but adding them is very easy. Let's add numpy to our project:
 ```
 pixi add numpy
 ```
@@ -161,6 +163,7 @@ $ cat pixi.toml | tail -2
 numpy = ">=2.0.1,<3"
 ```
 
+### Running Python
 Before moving on, we should have a file we can test with. Create a `.py` file and add the following.
 ```
 $ vi example.py
@@ -181,7 +184,7 @@ ModuleNotFoundError: No module named 'numpy'
 To run our file, we can use two main methods: in a `pixi` sub-shell or using `pixi run python-file.py`. The choice of which method to use is primarily personal preference.
 
 
-### Sub-shell Method
+#### Sub-shell Method
 Enterning the sub-shell creates a temporary python environment with all the installed packages being available.
 ```
 joe@v5:~/...$ pixi shell
@@ -206,7 +209,7 @@ You can also exit the sub-sell the same way you exit a regular shell.
 joe@v5:~/...$
 ```
 
-### `pixi run` Method
+#### `pixi run` Method
 Using `pixi` run does not require you to enter a sub-shell and can be done with
 ```
 joe@v5:~/...$ pixi run python "example.py"
