@@ -169,7 +169,7 @@ Before moving on, we should have a file we can test with. Create a `.py` file an
 ```
 $ vi example.py
 
------ Add the following -----
+##### Add the following #####
 import numpy as np
 print(np.pi)
 ```
@@ -181,6 +181,8 @@ ModuleNotFoundError: No module named 'numpy'
 ```
 
 `numpy` was added to the `pixi` project in `pixi-example/`, not globally, so the global `python` command has no idea what `numpy` is.
+
+#### Running `example.py`
 
 To run our file, we can use two main methods: in a `pixi` sub-shell or using `pixi run python-file.py`. The choice of which method to use is primarily personal preference.
 
