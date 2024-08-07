@@ -1,7 +1,7 @@
 # pixi tutorial
 A quick tutorial for the "project manager" `pixi`. Although this tutorial is in python, `pixi` supports many other languages.
 
-(adapted from the [pixi github](https://github.com/prefix-dev/pixi))
+(adapted from the [pixi github](https://github.com/prefix-dev/pixi), go here if you want a more in depth explaination of anything here)
 
 
 ## Overview
@@ -16,7 +16,6 @@ Who should use `pixi`?
 Where can you use `pixi`?
 - any major operating stystem
   - Linux, Windows, macOS (including Apple Silicon)
-- any machine that has `pixi` downloaded
 
 When to use `pixi`?
 - any project where you would use a `python` environment or virtual environment for development or testing
@@ -26,31 +25,56 @@ How to use `pixi`
 - Follow the installation instructions below 🙂
 
 ## Installation
+The installation donwloads and runs the current `install.sh` file from [pixi github](https://github.com/prefix-dev/pixi)
+
 Jump to whichever operating system you are using
 - [Linux](#linux)
 - [macOS](#macos)
-- Windows
-- other: why?
+- [Windows](#windows)
+- [Others](https://github.com/prefix-dev/pixi/main?tab=readme-ov-file#installation) 🤷‍♂️
 
 ### Linux
-- testing
-- test
-- tes
-- t
-- est
-- es
-- tse
-- t
-- se
-- tse
-- t
+
+Bash
+```
+curl -fsSL https://pixi.sh/install.sh | bash
+. ~/.bashrc
+```
+Brew
+```
+brew install pixi
+. ~/.bashrc
+```
 
 ### macOS
-- ttest
-- test
-- tset
-- set
-- es
-- t
-- es
-- tes
+
+Zsh
+```
+curl -fsSL https://pixi.sh/install.sh | zsh
+source ~/.zshrc
+```
+Bash
+```
+curl -fsSL https://pixi.sh/install.sh | bash
+. ~/.bashrc
+```
+Brew
+```
+brew install pixi
+# if you use .bashrc
+. ~/.bashrc
+# if you use .zshrc
+source ~/.zshrc
+```
+
+### Windows
+
+PowerShell (may need to run as administrator)
+```
+iwr -useb https://pixi.sh/install.ps1 | iex
+```
+winget
+```
+winget install prefix-dev.pixi
+```
+
