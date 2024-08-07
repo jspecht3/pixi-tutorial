@@ -148,7 +148,7 @@ This creates a `pixi.toml`, which gives an overview of the project. Inside this 
 ```
 vi pixi.toml
 ```
-This file is meant to be human readable, so anything information about the project you want is probably here. The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here.
+This file is meant to be human readable, so any information you want about the project is probably here. The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here and `pixi` will handle the rest.
 ```
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 ```
@@ -174,7 +174,40 @@ import numpy as np
 print(np.pi)
 ```
 
-Now that `numpy` has been added to the dependecies, it can be used in two main ways: in a `pixi` sub-shell or using `pixi run python-file.py`.
+Try running the file, which should not work.
+```
+$ python example.py
+ModuleNotFoundError: No module named 'numpy'
+```
+
+`numpy` was added to the `pixi` project in `pixi-example/`, not globally, so the global `python` command has no idea what `numpy` is.
+
+To run our file, we can use two main methods: in a `pixi` sub-shell or using `pixi run python-file.py`. The choice of which method to use is primarily personal preference.
+
+Enterning the sub-shell creates a temporary python environment with all the installed packages being available.
+```
+joe@v5:~/...$ pixi shell
+(pixi-example) (base) joe@v5:~/...$
+```
+Running the file now returns the expected result.
+```
+$ python example.py
+3.141592653589793
+```
+if you want to stay in the file:
+```
+$ python -i example.py
+3.141592653589793
+>>> print(np.cos(np.pi / 2))
+6.123233995736766e-17
+>>> exit()
+```
+You can also exit the sub-sell the same way you exit a regular shell.
+```
+(pixi-example) (base) joe@v5:~/...$ exit
+joe@v5:~/...$
+```
+
 
 ### Using Somebody Else's Project
 test
