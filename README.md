@@ -184,7 +184,7 @@ ModuleNotFoundError: No module named 'numpy'
 
 To run our file, we can use two main methods: in a `pixi` sub-shell or using `pixi run python-file.py`. The choice of which method to use is primarily personal preference.
 
- \
+
 #### Sub-shell Method
 Enterning the sub-shell creates a temporary python environment with all the installed packages being available.
 ```
@@ -216,6 +216,7 @@ Using `pixi` run does not require you to enter a sub-shell and can be done with
 joe@v5:~/...$ pixi run "example.py"
 3.141592653589793
 ```
+
 
 
 ### Using Somebody Else's Project
