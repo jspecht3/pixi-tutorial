@@ -86,8 +86,47 @@ winget install prefix-dev.pixi
 ```
 
 ## Usage
+- [Getting Started](#getting-started)
 - [Making Your Own Project](#making-your-own-project)
 - [Using Somebody Else's Project](#using-somebody-elses-project)
+
+
+### Getting Started
+Before getting into any development, a preperations should be made.
+
+First, if you are currently in a conda environment, you will see something that looks like this:
+```
+(base) joe@v5:~/project/path/pixi-example$
+```
+If you are not in a `conda` environment, good, the next step will not apply to you.
+
+To get into an isolated environment for testing and replication purposes, we do not want to be in our own python environment that will have random packages installed.
+```
+(base) joe@v5:~$
+(base) joe@v5:~$ conda deactivate
+joe@v5:~$
+```
+
+Check that `python` does not work to verify no funny business is afoot.
+```
+$ python
+Command 'python' not found, did you mean:...
+```
+
+Next, we can install `python` (and a lot of other useful non-python tools) with:
+```
+pixi global install python
+```
+
+This installs `python` in its own `pixi` controlled environment in `~/.pixi/envs/`. You can remove these environments anytime with `pixi global remove <env-name>`.
+
+Now running `python` will go into a python sub-shell where you can enter python commands. However, there are no modules that we would want, but that is covered in the [next section](#making-your-own-project).
+```
+$ python
+>>> import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+>>> exit()
+```
 
 ### Making Your Own Project
 To start, make a directory where you want your project to live and go into that directory
@@ -103,12 +142,11 @@ This creates a `pixi.toml`, which gives an overview of the project. Inside this 
 ```
 vi pixi.toml
 ```
-This file is meant to be human readable, so anything information about the project you want is probably here.
-
-The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here.
+This file is meant to be human readable, so anything information about the project you want is probably here. The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here.
 ```
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 ```
+Next, close the `pixi.toml` file.
 
 
 ### Using Somebody Else's Project
