@@ -4,6 +4,11 @@ A quick tutorial for the "project manager" `pixi`. Although this tutorial is in 
 (adapted from the [pixi github](https://github.com/prefix-dev/pixi), go here if you want a more in depth explaination of anything here)
 
 
+## Sections
+- [Overview](#overview)
+- [Installation](#installation)
+- [Usage](#usage)
+
 ## Overview
 What is `pixi`?
 - `pixi` is a package mangager that greatly simplifies the effort required by the user to replicate their development environment on other machines
@@ -26,6 +31,8 @@ How to use `pixi`
 
 ## Installation
 The installation donwloads and runs the current `install.sh` file from [pixi github](https://github.com/prefix-dev/pixi)
+
+Go to the [pixi github](https://github.com/prefix-dev/pixi) to update and uninstall.
 
 Jump to whichever operating system you are using
 - [Linux](#linux)
@@ -78,3 +85,12 @@ winget
 winget install prefix-dev.pixi
 ```
 
+## Usage
+- [Making Your Own Project]()
+- [Using Somebody Else's Project]()
+
+### Making Your Own Project
+test
+
+### Using Somebody Else's Project
+test
