@@ -4,7 +4,6 @@ A quick tutorial for the "project manager" `pixi`. Although this tutorial is in 
 (adapted from the [pixi github](https://github.com/prefix-dev/pixi), go here if you want a more in depth explaination of anything here)
 
 
-## Sections
 - [Overview](#overview)
 - [Installation](#installation)
   - [Linux](#linux)
@@ -153,8 +152,29 @@ This file is meant to be human readable, so anything information about the proje
 ```
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 ```
-Next, close the `pixi.toml` file.
 
+Right now, we have no non-standard `python` modules, but adding them is very easy. Let's add numpy to our project:
+```
+pixi add numpy
+```
+
+Adding the first package does two things: creates a `pixi.lock` file and updates the `pixi.toml` file to include the new dependency. The `pixi.lock` file is for robots and is how `pixi` is able to recreate the environment on other machines. Inside `pixi.toml`, we can now see `numpy` was added to the dependencies.
+```
+$ cat pixi.toml | tail -2
+[dependencies]
+numpy = ">=2.0.1,<3"
+```
+
+Before moving on, we should have a file we can test with. Create a `.py` file and add the following.
+```
+$ vi example.py
+
+----- Add the following -----
+import numpy as np
+print(np.pi)
+```
+
+Now that `numpy` has been added to the dependecies, it can be used in two main ways: in a `pixi` sub-shell or using `pixi run python-file.py`.
 
 ### Using Somebody Else's Project
 test
