@@ -90,7 +90,24 @@ winget install prefix-dev.pixi
 - [Using Somebody Else's Project](#using-somebody-elses-project)
 
 ### Making Your Own Project
-test
+To start, make a directory where you want your project to live and go into that directory
+```
+mkdir ~/project/path/pixi-example
+cd ~/project/path/pixi-example
+```
+In this directory, we need to initialize a `pixi` project
+```
+pixi init
+```
+This creates a `pixi.toml`, which gives an overview of the project. Inside this file is where you can add github actions and add more platforms.
+```
+vi pixi.toml
+```
+In the `channels` line, you will see your operating system. The `authors` will automatically populate with your linked `git` e-mail. If you want to make your project compatible with other platforms, add them here.
+```
+platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
+```
+
 
 ### Using Somebody Else's Project
 test
