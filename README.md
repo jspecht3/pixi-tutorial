@@ -340,7 +340,7 @@ Ideally, all tasks would be able to run on your machine. If there are some that 
 
 Next, we can run the task `open-plot`,
 ```
-pixi task open-plot
+pixi run open-plot
 ```
 which will generate the data required for the image, create the image, and open the following image.
 ![reference](images/reference.png)
