@@ -325,3 +325,16 @@ joe@v5:~/...$ tree
 
 2 directories, 8 files
 ```
+Next, we can view the tasks the project creator set-up for their project.
+```
+joe@v5:~/...$ pixi task list
+Tasks that can run on this machine:
+-----------------------------------
+gen-data, gen-plot, open-plot
+```
+Ideally, all tasks would be able to run on your machine. If there are some that cannot, the fix is very simple. Go into `pixi.toml`, add support for your platform, remove `pixi.lock`, and rerun the command `pixi install`.
+
+Lastly, we can run the task `open-plot`, which will generate the following image.
+```
+pixi task open-plot
+```
