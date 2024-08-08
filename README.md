@@ -144,7 +144,7 @@ pixi init
 Initializing a `pixi` project creates a `pixi.toml`, which gives an overview of the project. Inside this file is where you can add github actions and add more platforms. A freshly initialized `pixi.toml` file on a linux machine will look similair to this file:
 ```
 [project]
-name = "pixii"
+name = "pixi-example"
 version = "0.1.0"
 description = "Add a short description here"
 authors = ["FirstName LastName <sample-email@email.com>"]
