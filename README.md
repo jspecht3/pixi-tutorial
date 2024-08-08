@@ -275,4 +275,4 @@ commands.txt  pi.txt
 This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run.
 
 ## Using Somebody Else's Project
-test
+First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily, this repository is somebody else's `pixi` project.
