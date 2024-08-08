@@ -276,3 +276,14 @@ This is a rather trivial example, but hopefully you see how powerful these tasks
 
 ## Using Somebody Else's Project
 First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily, this repository is somebody else's `pixi` project.
+
+First, nagivate to the folder you want the repository in, clone the repository, and navigate inside.
+```
+cd ~/projects
+# with an ssh key
+git clone git@github.com:jspecht3/pixi-tutorial.git
+# with the URL
+git clone https://github.com/jspecht3/pixi-tutorial.git
+
+cd pixi-tutorial
+```
