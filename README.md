@@ -338,9 +338,13 @@ gen-data, gen-plot, open-plot
 ```
 Ideally, all tasks would be able to run on your machine. If there are some that cannot, the fix is very simple. Go into `pixi.toml`, add support for your platform, remove `pixi.lock`, and rerun the command `pixi install`.
 
-Lastly, we can run the task `open-plot`,
+Next, we can run the task `open-plot`,
 ```
 pixi task open-plot
 ```
-which will generate the following image.
+which will generate the data required for the image, create the image, and open the following image.
 ![reference](images/reference.png)
+
+Running other people's tasks comes with the same risk as running other people's `bash` scripts, so be careful who you trust. If you have concerns, you can always go into `pixi.toml` to check exactly what each task does.
+
+You should now be able to create your own `pixi` project and use somebody else's. Good luck coding!
