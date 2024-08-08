@@ -141,10 +141,21 @@ In this directory, we need to initialize a `pixi` project
 pixi init
 ```
 ### Introduction to `pixi.toml`
-Initializing a `pixi` project creates a `pixi.toml`, which gives an overview of the project. Inside this file is where you can add github actions and add more platforms.
+Initializing a `pixi` project creates a `pixi.toml`, which gives an overview of the project. Inside this file is where you can add github actions and add more platforms. A freshly initialized `pixi.toml` file on a linux machine will look similair to this file:
 ```
-vi pixi.toml
+[project]
+name = "pixii"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["FirstName LastName <sample-email@email.com>"]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tasks]
+
+[dependencies]
 ```
+
 This file is meant to be human readable, so any information you want about the project is probably here. The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here and `pixi` will handle the rest.
 ```
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
