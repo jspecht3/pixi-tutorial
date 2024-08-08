@@ -293,6 +293,8 @@ Here, we can see the current file structure (I am using `tree`, which you can in
 joe@v5:~/...$ tree
 .
 ├── commands.txt
+├── images
+│   └── reference.png
 ├── LICENSE
 ├── pixi.toml
 ├── python-files
@@ -314,6 +316,8 @@ Looking at `tree` again shows that we now have the `pixi.lock` file, which was g
 joe@v5:~/...$ tree
 .
 ├── commands.txt
+├── images
+│   └── reference.png
 ├── LICENSE
 ├── pixi.lock
 ├── pixi.toml
@@ -334,7 +338,9 @@ gen-data, gen-plot, open-plot
 ```
 Ideally, all tasks would be able to run on your machine. If there are some that cannot, the fix is very simple. Go into `pixi.toml`, add support for your platform, remove `pixi.lock`, and rerun the command `pixi install`.
 
-Lastly, we can run the task `open-plot`, which will generate the following image.
+Lastly, we can run the task `open-plot`,
 ```
 pixi task open-plot
 ```
+which will generate the following image.
+![reference](images/reference.png)
