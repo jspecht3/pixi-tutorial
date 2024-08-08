@@ -173,6 +173,7 @@ $ cat pixi.toml | tail -2
 [dependencies]
 numpy = ">=2.0.1,<3"
 ```
+`pixi` can install any package, so long as the package exists in one of the channels listed in the `pixi.toml` file. This means that `pixi` is not just able to install standard python packages such as `numpy`, `scipy`, and `matplotlib`; but also packages such as `cmake` for use in compiling c++ code!
 
 ### Running Python
 Before moving on, we should have a file we can test with. Create a `.py` file and add the following.
@@ -283,7 +284,9 @@ $ ls *.txt
 commands.txt  pi.txt
 ```
 
-This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run.
+Further, you are not just limited to adding tasks through the command line, but can also edit the `pixi.toml` file's `[tasks]` block.
+
+This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run, or even compile!
 
 ## Using Somebody Else's Project
 First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily, this repository is somebody else's `pixi` project.
