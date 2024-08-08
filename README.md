@@ -195,7 +195,7 @@ Running the file now returns the expected result.
 $ python example.py
 3.141592653589793
 ```
-if you want to stay in the file:
+If you want to stay in the file:
 ```
 $ python -i example.py
 3.141592653589793
@@ -203,7 +203,7 @@ $ python -i example.py
 6.123233995736766e-17
 >>> exit()
 ```
-You can also exit the sub-sell the same way you exit a regular shell.
+You can exit the sub-sell the same way you exit a regular shell.
 ```
 (pixi-example) (base) joe@v5:~/...$ exit
 joe@v5:~/...$
@@ -251,7 +251,7 @@ Now we can add a new task that outputs the value in `pi.txt` with a bit more tha
 ```
 pixi task add print "echo 'According to numpy, pi = $(cat pi.txt)'" --depends-on example
 ```
-The `depends-on` option tells pixi that `example` needs to be run before `print` is run. Let's first verify `pi.txt` does not exist.
+The `depends-on` option tells pixi that `example` needs to be run before `print`. Let's first verify `pi.txt` does not exist yet.
 ```
 $ ls *.txt
 commands.txt
@@ -271,6 +271,8 @@ Without us ever having ran the `python` file `example.py` or the `pixi` task `ex
 $ ls *.txt
 commands.txt  pi.txt
 ```
+
+This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run.
 
 ## Using Somebody Else's Project
 test
