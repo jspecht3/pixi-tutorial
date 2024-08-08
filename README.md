@@ -288,3 +288,40 @@ git clone https://github.com/jspecht3/pixi-tutorial.git
 
 cd pixi-tutorial
 ```
+Here, we can see the current file structure (I am using `tree`, which you can install with `pixi global install tree` 😉). Notice there is no `pixi.lock` file, but this is not an issue.
+```
+joe@v5:~/...$ tree
+.
+├── commands.txt
+├── LICENSE
+├── pixi.toml
+├── python-files
+│   ├── gen-data.py
+│   ├── parser.py
+│   └── plotting.py
+└── README.md
+
+2 directories, 7 files
+```
+A project _should_ have it's `pixi.lock` file in version control for ease of use, but it is not strictly neseccary.
+
+Let's generate the `pixi.lock` file for this project.
+```
+pixi install
+```
+Looking at `tree` again shows that we now have the `pixi.lock` file, which was generated from information in `pixi.toml`. Overall, `pixi.toml` is the most important part of environment as you can always rebuild `pixi.lock` with it.
+```
+joe@v5:~/...$ tree
+.
+├── commands.txt
+├── LICENSE
+├── pixi.lock
+├── pixi.toml
+├── python-files
+│   ├── gen-data.py
+│   ├── parser.py
+│   └── plotting.py
+└── README.md
+
+2 directories, 8 files
+```
