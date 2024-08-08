@@ -212,10 +212,24 @@ joe@v5:~/...$
 #### `pixi run` Method
 Using `pixi` run does not require you to enter a sub-shell and can be done with
 ```
-joe@v5:~/...$ pixi run python "example.py"
+joe@v5:~/...$ pixi run python example.py
 3.141592653589793
 ```
 
+### Tasks
+Tasks are user-built commands with an analogous level of versitility to bash scripts. The sky ☁️ is the limit.
+
+We can create a task that outputs the result of `example.py` from earlier.
+```
+pixi task add print "python example.py"
+```
+
+We can run the task and see that the output is $\pi$ as expected.
+```
+joe@v5:~/...$ pixi run print
+✨ Pixi task (print): python example.py
+3.141592653589793
+```
 
 ## Using Somebody Else's Project
 test
