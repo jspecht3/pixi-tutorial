@@ -221,14 +221,55 @@ Tasks are user-built commands with an analogous level of versitility to bash scr
 
 We can create a task that outputs the result of `example.py` from earlier.
 ```
-pixi task add print "python example.py"
+pixi task add example "python example.py"
 ```
 
 We can run the task and see that the output is $\pi$ as expected.
 ```
 joe@v5:~/...$ pixi run print
-✨ Pixi task (print): python example.py
+✨ Pixi task (example): python example.py
 3.141592653589793
+```
+
+#### Tasks with Dependencies
+A lone task may not change the world, but together they just might. You can create tasks that depend on other tasks. To do this, let's open `example.py` 
+```
+$ vi example.py
+```
+and modify it to write to an output file.
+```
+import numpy as np
+print(np.pi)
+
+# add the three following lines
+f = open('pi.txt', 'w')
+f.write(str(np.pi))
+f.close()
+```
+
+Now we can add a new task that outputs the value in `pi.txt` with a bit more than just the value.
+```
+pixi task add print "echo 'According to numpy, pi = $(cat pi.txt)'" --depends-on example
+```
+The `depends-on` option tells pixi that `example` needs to be run before `print` is run. Let's first verify `pi.txt` does not exist.
+```
+$ ls *.txt
+commands.txt
+```
+
+We can then look at the output of this task.
+```
+joe@v5:~/...$ pixi run print
+✨ Pixi task (example): python example.py
+3.141592653589793
+
+✨ Pixi task (print): echo 'According to numpy, pi = 3.141592653589793'
+According to numpy, pi = 3.141592653589793
+```
+Without us ever having ran the `python` file `example.py` or the `pixi` task `example`, we generate the output file `pi.txt` that we can see is now in the directory.
+```
+$ ls *.txt
+commands.txt  pi.txt
 ```
 
 ## Using Somebody Else's Project
