@@ -141,7 +141,7 @@ In this directory, we need to initialize a `pixi` project
 pixi init
 ```
 ### Introduction to `pixi.toml`
-Initializing a `pixi` project creates a `pixi.toml`, which gives an overview of the project. Inside this file is where you can add github actions and add more platforms. A freshly initialized `pixi.toml` file on a linux machine will look similair to this file:
+Initializing a `pixi` project creates a `pixi.toml`, which gives an overview of the project. Inside this file, you can configure your project with changes such as: adding github actions and support for more platforms. On a Linux machine, a fresh `pixi.toml` will look like this:
 ```
 [project]
 name = "pixi-example"
@@ -173,7 +173,7 @@ $ cat pixi.toml | tail -2
 [dependencies]
 numpy = ">=2.0.1,<3"
 ```
-`pixi` can install any package, so long as the package exists in one of the channels listed in the `pixi.toml` file. This means that `pixi` is not just able to install standard python packages such as `numpy`, `scipy`, and `matplotlib`; but also packages such as `cmake` for use in compiling c++ code!
+`pixi` can install any package, so long as the package exists in one of the channels listed in the `pixi.toml` file. This means that `pixi` is not just able to install standard python packages such as: `numpy`, `scipy`, and `matplotlib`, but also packages such as `cmake` for use in compiling C++ code.
 
 ### Running Python
 Before moving on, we should have a file we can test with. Create a `.py` file and add the following.
@@ -284,9 +284,9 @@ $ ls *.txt
 commands.txt  pi.txt
 ```
 
-Further, you are not just limited to adding tasks through the command line, but can also edit the `pixi.toml` file's `[tasks]` block.
+We can now see these previously added tasks in `pixi.toml`. In addition to `pixi task add`, you can directly create tasks in `pixi.toml` if you so choose.
 
-This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run, or even compile!
+This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run. Not only can you run simply `python` scripts like in this example, but compile more complicated projects for languages that require such (C++ for example).
 
 ## Using Somebody Else's Project
 First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily, this repository is somebody else's `pixi` project.
