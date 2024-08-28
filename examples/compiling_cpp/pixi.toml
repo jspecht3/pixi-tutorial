@@ -1,0 +1,13 @@
+[project]
+name = "compiling_cpp"
+version = "0.1.0"
+description = "Tutorial on compiling C++ source code utilizing pixi"
+authors = ["Nathan Glaser <nglaser3@illinois.edu>"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tasks]
+clean = "rm -rf build; rm NameGetter"
+compile =  "mkdir build; cd build; cmake ..; cmake --build .; mv NameGetter ../;  cd ../"
+[dependencies]
+cmake = ">=3.30.2,<4"
