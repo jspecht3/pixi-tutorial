@@ -44,7 +44,7 @@ Jump to whichever operating system you are using
 - [Linux](#linux)
 - [macOS](#macos)
 - [Windows](#windows)
-- [Others](https://github.com/prefix-dev/pixi) 🤷‍♂️ check `pixi`'s github
+- [Others](https://github.com/prefix-dev/pixi) 🤷‍♂️ (check `pixi`'s github)
 
 ### Linux
 
