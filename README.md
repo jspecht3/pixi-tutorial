@@ -289,7 +289,7 @@ We can now see these previously added tasks in `pixi.toml`. In addition to `pixi
 This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run. Not only can you run simply `python` scripts like in this example, but compile more complicated projects for languages that require such (C++ for example).
 
 ## Using Somebody Else's Project
-First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily, this repository is somebody else's `pixi` project.
+First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily for us, this repository is somebody else's `pixi` project.
 
 First, nagivate to the folder you want the repository in, clone the repository, and navigate inside.
 ```
