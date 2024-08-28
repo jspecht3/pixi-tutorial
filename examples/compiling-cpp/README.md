@@ -31,7 +31,7 @@ $ tree -I 'build'
 1 directory, 6 files
 ```
 
-❓❓❓❓❓❓ To run the `NameGetter` executable, you must use `./NameGetter` as the executable is not installed on your computer (as that would be silly for a quick example guide). ❓❓❓❓❓❓
+To run the `NameGetter` executable, you must use `./NameGetter` due to the fact that `NameGetter` is not installed on your computer (that would be silly for such a quick walk-through).
 
 ## User Compilation without pixi
 Now, lets see what we would need to do without pixi. First, when installing, we always ensure CMake is up to date.
