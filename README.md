@@ -192,7 +192,7 @@ $ python example.py
 ModuleNotFoundError: No module named 'numpy'
 ```
 
-`numpy` was added to the `pixi` project in `pixi-example/`, not globally, so the global `python` command has no idea what `numpy` is.
+`numpy` was added to the `pixi` project in `pixi-example/`, so the global `python` command does not know where `numpy`.
 
 To run our file, we can use two main methods: in a `pixi` sub-shell or using `pixi run python-file.py`. The choice method is primarily personal preference.
 
@@ -208,7 +208,7 @@ Running the file now returns the expected result.
 $ python example.py
 3.141592653589793
 ```
-If you want to stay in the file:
+If you want to stay in the file, use the `-i` option.
 ```
 $ python -i example.py
 3.141592653589793
@@ -232,9 +232,9 @@ joe@v5:~/...$ pixi run python example.py
 The `pixi run` method may be more convenient when only running a few commands or when you are in the process of adding packages. However, if you plan on running many commands, the `pixi` shell is more convenient.
 
 ### Tasks
-Tasks are user-built commands with an analogous level of versitility to bash scripts. The sky ☁️ is the limit.
+Tasks are user-built commands with an analogous level of versitility to bash scripts; the sky ☁️ is the limit.
 
-We can create a task that outputs the result of `example.py` from earlier.
+Let's create a task that outputs the result of `example.py` from earlier.
 ```
 pixi task add example "python example.py"
 ```
@@ -247,7 +247,7 @@ joe@v5:~/...$ pixi run example
 ```
 
 #### Tasks with Dependencies
-A lone task may not change the world, but together, they might. You can create tasks that depend on other tasks. To do this, let's open `example.py` 
+A lone task may not change the world, but together, they might. You can create tasks that depend on other tasks. To do this, let's open `example.py`.
 ```
 $ vi example.py
 ```
@@ -283,22 +283,22 @@ joe@v5:~/...$ pixi run print
 ✨ Pixi task (print): echo 'According to numpy, pi = 3.141592653589793'
 According to numpy, pi = 3.141592653589793
 ```
-Without having run the `python` file `example.py` or the `pixi` task `example`, we generate the output file `pi.txt` that we can see is now in the directory.
+Without having run the `python` file `example.py` or the `pixi` task `example`, we generated the output file `pi.txt`.
 ```
 $ ls pi.txt
 pi.txt
 ```
 
-We can now see these previously added tasks in `pixi.toml`. In addition to `pixi task add`, you can directly create tasks in `pixi.toml` if you so choose.
+Information about the current tasks can be found inside the `pixi.toml` file. In addition to `pixi task add`, you can directly create tasks in `pixi.toml` if you so choose.
 
 This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run. Not only can you run simply `python` scripts like in this example, but compile more complicated projects for languages that require such (C++ for example).
 
 For an example of C++ compilation, you can check out [this example](https://github.com/jspecht3/pixi-tutorial/tree/main/examples/compiling-cpp).
 
 ## Using Somebody Else's Project
-First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily for us, this repository is somebody else's `pixi` project.
+First, you have to make sure somebody used `pixi` for their project. Luckily for us, this repository is somebody else's `pixi` project.
 
-First, nagivate to the folder you want the repository in, clone the repository, and navigate inside.
+First, nagivate to the folder you want the repository in, clone the repository, and navigate to `pixi-tutorial`.
 ```
 cd ~/projects
 
@@ -326,7 +326,7 @@ joe@v5:~/...$ tree
 
 2 directories, 7 files
 ```
-A project _should_ have it's `pixi.lock` file in version control for ease of use, but it is not strictly neseccary.
+A project _should_ commit it's `pixi.lock` file to version control for ease of use, but it is not strictly neseccary.
 
 Let's generate the `pixi.lock` file for this project.
 ```
