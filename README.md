@@ -264,7 +264,9 @@ f.close()
 
 Now we can add a new task that outputs the value in `pi.txt` with more information than the value.
 ```
-pixi task add print "echo 'According to numpy, pi = $(cat pi.txt)'" --depends-on example
+pixi task add print "echo
+  'According to numpy, pi = $(cat pi.txt)'" 
+  --depends-on example
 ```
 The `depends-on` option tells pixi that `example` needs to be run before `print`. Let's first verify `pi.txt` does not exist yet.
 ```
