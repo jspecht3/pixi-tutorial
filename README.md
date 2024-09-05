@@ -131,18 +131,18 @@ ModuleNotFoundError: No module named 'numpy'
 
 
 ## Making Your Own Project
-To start, let's make a directory where the project will live and navigate into that directory.
+To start, let's make a directory for this example and navigate into that directory.
 ```
 mkdir ~/project/path/pixi-example
 cd ~/project/path/pixi-example
 ```
-In this directory, we need to initialize a `pixi` project.
+In this directory, we need to initialize a `pixi` project with `pixi init`.
 ```
 pixi init
 ```
 
 ### Introduction to `pixi.toml`
-Initializing a `pixi` project creates a `pixi.toml`, which gives an overview of the project. Inside this file, you can configure your project with changes such as: adding github actions and support for more platforms. On a Linux machine, a fresh `pixi.toml` will look like this:
+Initializing a `pixi` project creates a `pixi.toml`, which provies an overview of the project. Inside this file, you can configure your project with changes such as: adding github actions and support for more platforms. On a Linux machine, a fresh `pixi.toml` will look like this:
 ```
 [project]
 name = "pixi-example"
@@ -157,24 +157,24 @@ platforms = ["linux-64"]
 [dependencies]
 ```
 
-This file is meant to be human readable, so any information you want about the project is probably here. The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here and `pixi` will handle the rest.
+The `pixi.toml` is meant to be human readable, so any quick information about the project is probably here. The `authors` will automatically populate with your linked `git` e-mail. In the `platforms` line, you will see your operating system. If you want to make your project compatible with other platforms, add them here and `pixi` will handle the rest.
 ```
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 ```
 
 ### Adding the First Python Package
-Right now, we have no non-standard `python` packages, but adding them is very easy. Let's add numpy to our project:
+Right now, we have no non-standard `python` packages, but adding them is very easy. Let's add numpy to our project.
 ```
 pixi add numpy
 ```
 
-Adding the first package does two things: creates a `pixi.lock` file and updates the `pixi.toml` file to include the new dependency. The `pixi.lock` file is for robots and is how `pixi` recreates the environment on other machines. Inside `pixi.toml`, we can now see `numpy` was added to the dependencies.
+Adding the first package does two things: creates a `pixi.lock` file and updates the `pixi.toml` file to include the new dependency. The `pixi.lock` file is for robots and is how `pixi` recreates your environment on other machines. Inside `pixi.toml`, we can now see `numpy` in the dependencies.
 ```
 $ cat pixi.toml | tail -2
 [dependencies]
 numpy = ">=2.0.1,<3"
 ```
-`pixi` can install any package as long as the package exists in one of the channels listed in the `pixi.toml` file. This means that `pixi` is not just able to install standard python packages such as: `numpy`, `scipy`, and `matplotlib`, but also packages such as `cmake` for use in compiling C++ code.
+`pixi` can install any package from the channels listed in the `pixi.toml` file. This means that `pixi` is not just able to install standard python packages such as: `numpy`, `scipy`, and `matplotlib`, but also packages such as `cmake` for use in compiling C++ code.
 
 ### Running Python
 Before moving on, we should have a file we can test with. Create a `.py` file and add the following.
