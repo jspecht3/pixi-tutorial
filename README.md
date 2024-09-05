@@ -262,10 +262,10 @@ f.write(str(np.pi))
 f.close()
 ```
 
-Now we can add a new task that outputs the value in `pi.txt` with more information than the value.
+Now we can add a new task that outputs the value in `pi.txt` with more information than the value. (in one line)
 ```
-pixi task add print "echo
-  'According to numpy, pi = $(cat pi.txt)'" 
+pixi task add print "echo //
+  'According to numpy, pi =' $(cat pi.txt)" //
   --depends-on example
 ```
 The `depends-on` option tells pixi that `example` needs to be run before `print`. Let's first verify `pi.txt` does not exist yet.
@@ -293,7 +293,7 @@ We can now see these previously added tasks in `pixi.toml`. In addition to `pixi
 
 This is a rather trivial example, but hopefully you see how powerful these tasks can be when trying to make your code easy for others to run. Not only can you run simply `python` scripts like in this example, but compile more complicated projects for languages that require such (C++ for example).
 
-For an example of C++ compilation, you can check out [this example](https://github.com/jspecht3/pixi-tutorial/tree/main/examples/compiling-cpp) written by Nathan Charles Glaser.
+For an example of C++ compilation, you can check out [this example](https://github.com/jspecht3/pixi-tutorial/tree/main/examples/compiling-cpp).
 
 ## Using Somebody Else's Project
 First, you have to make sure somebody used `pixi` for their project. Usually, people that use `pixi` will not miss the chance to tell others about it, so it should be pretty easy to spot. Luckily for us, this repository is somebody else's `pixi` project.
@@ -357,7 +357,7 @@ Tasks that can run on this machine:
 -----------------------------------
 gen-data, gen-plot, open-plot
 ```
-Ideally, all tasks would be able to run on your machine. If there are some that cannot, the fix is very simple. Go into `pixi.toml`, add support for your platform, remove `pixi.lock`, and rerun the command `pixi install`.
+Ideally, all tasks would be able to run on your machine. If there are commands that cannot cannot, do the following: go into `pixi.toml`, add support for your platform, remove `pixi.lock`, and rerun the command `pixi install`.
 
 Next, we can run the task `open-plot`,
 ```
