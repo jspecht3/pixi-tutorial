@@ -247,7 +247,7 @@ joe@v5:~/...$ pixi run example
 ```
 
 #### Tasks with Dependencies
-A lone task may not change the world, but together they might. You can create tasks that depend on other tasks. To do this, let's open `example.py` 
+A lone task may not change the world, but together, they might. You can create tasks that depend on other tasks. To do this, let's open `example.py` 
 ```
 $ vi example.py
 ```
