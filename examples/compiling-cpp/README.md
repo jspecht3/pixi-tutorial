@@ -1,5 +1,5 @@
 # Compiling C++ source code with CMake using pixi
-Written by: [Nathan Charles Glaser](nglaser3@illinois.edu)
+Written by: Nathan Charles Glaser, (nglaser3@illinois.edu)
 
 While pixi is a conda package manager, various packages on the different conda channels can compile others codes, such as: C++ and ForTran. 
 
