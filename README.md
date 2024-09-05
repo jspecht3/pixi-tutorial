@@ -229,7 +229,7 @@ joe@v5:~/...$ pixi run python example.py
 3.141592653589793
 ```
 
-The `pixi run` method may be more convenient when only running a few commands, but, if you plan on running many commands, the `pixi` shell is more convenient.
+The `pixi run` method may be more convenient when only running a few commands or when you are in the process of adding packages. However, if you plan on running many commands, the `pixi` shell is more convenient.
 
 ### Tasks
 Tasks are user-built commands with an analogous level of versitility to bash scripts. The sky ☁️ is the limit.
