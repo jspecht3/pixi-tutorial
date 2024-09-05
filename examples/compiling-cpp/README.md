@@ -1,4 +1,6 @@
 # Compiling C++ source code with CMake using pixi
+Written by: [Nathan Charles Glaser](nglaser3@illinois.edu)
+
 While pixi is a conda package manager, various packages on the different conda channels can compile others codes, such as: C++ and ForTran. 
 
 In this example, we will demonstrate C++ compliation with some basic C++ source code, which will be compiled with CMake. CMake is a widely used tool that compiles C++ software (e.g., OpenMC). This example is NOT a CMake or C++ tutorial, but rather, shows how pixi can reduce end-user compilation errors and trouble.
