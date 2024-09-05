@@ -99,7 +99,7 @@ First, if you are currently in a conda environment, you will see something that 
 ```
 (base) joe@v5:~$
 ```
-If you are not in a `conda` environment, good, the next step will not apply to you.
+If you are not in a `conda` environment, good; the next step will not apply to you.
 
 To enter an isolated environment for testing and replication purposes, we do not want to be in our own python environment as all of our base environments may be different. Even if we have the same packages, we may have different versions of the packages.
 ```
