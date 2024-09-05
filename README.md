@@ -268,8 +268,8 @@ pixi task add print "echo 'According to numpy, pi = $(cat pi.txt)'" --depends-on
 ```
 The `depends-on` option tells pixi that `example` needs to be run before `print`. Let's first verify `pi.txt` does not exist yet.
 ```
-$ ls *.txt
-commands.txt
+$ ls pi.txt
+ls: cannot access 'pi.txt': No such file or directory
 ```
 
 We can then look at the output of our task.
@@ -283,8 +283,8 @@ According to numpy, pi = 3.141592653589793
 ```
 Without having run the `python` file `example.py` or the `pixi` task `example`, we generate the output file `pi.txt` that we can see is now in the directory.
 ```
-$ ls *.txt
-commands.txt  pi.txt
+$ ls pi.txt
+pi.txt
 ```
 
 We can now see these previously added tasks in `pixi.toml`. In addition to `pixi task add`, you can directly create tasks in `pixi.toml` if you so choose.
